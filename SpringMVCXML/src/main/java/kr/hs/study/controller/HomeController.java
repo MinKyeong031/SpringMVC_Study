@@ -6,11 +6,17 @@ import org.springframework.web.bind.annotation.RequestMethod;
 
 @Controller
 public class HomeController {
-	
+
 	@RequestMapping(value="/", method=RequestMethod.GET)
 	public String home() {
 		System.out.println("home");
-		return "WEB-INF/views/index.jsp";
+		return "index";
+	}
+	
+	@RequestMapping(value="/test1", method=RequestMethod.GET)
+	public String test01() {
+		System.out.println("test1");
+		return "test1";
 	}
 
 }
