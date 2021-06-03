@@ -16,7 +16,7 @@ public class TestControlller {
 		//return "WEB-INF/views/sub1/test2.jsp"; 상대겨로 : 현재의 위치 /sub1/WEB-INF/views/sub1/test2.jsp
 	}
 
-	@GetMapping("//test3")
+	@GetMapping("/test3")
 //	@RequestMapping(value="/test3", method=RequestMethod.GET)
 	public String test3() {
 		System.out.println("test3");
