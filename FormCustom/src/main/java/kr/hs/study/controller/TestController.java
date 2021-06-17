@@ -2,6 +2,7 @@ package kr.hs.study.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 
 import kr.hs.study.model.dto.UserDTO;
@@ -24,5 +25,28 @@ public class TestController {
 		dto.setUser_addr2("kwanak 353");
 		
 		return "test1";
+	}
+	
+	@PostMapping("/test2")
+	public String test2(UserDTO dto) {
+		dto.setUser_name("lee");
+		dto.setUser_id("lee_id");
+		dto.setUser_pw("2222");
+		dto.setUser_email("lee@gmail.com");
+		dto.setUser_addr1("daegu");
+		dto.setUser_addr2("chimsan 153");
+		
+		return "test2";
+	}
+	
+	@PostMapping("/test3")
+	public String test3(@ModelAttribute("user") UserDTO dto) {
+		dto.setUser_name("park");
+		dto.setUser_id("park_id");
+		dto.setUser_pw("3333");
+		dto.setUser_email("park@gmail.com");
+		dto.setUser_addr1("busan");
+		dto.setUser_addr2("gwangan 32");
+		return "test3";
 	}
 }

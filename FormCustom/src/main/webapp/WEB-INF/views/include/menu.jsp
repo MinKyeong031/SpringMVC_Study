@@ -10,5 +10,7 @@
 <body>
 <br>
 	<a href="/test1">1. request로 수정(일반적인 jsp 방식) |  </a>
+	<a href="/test2">2. Customtag1 |  </a>
+	<a href="/test3">3. Customtag2(객체 이름:user) |  </a>
 </body>
 </html>
